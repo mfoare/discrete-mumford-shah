@@ -1,6 +1,6 @@
 % Reproduces last column of Fig. 9 in
 %   M. Foare, N. Pustelnik, L. Condat, "Semi-Linearized Proximal 
-%   Alternating Minimization for a Discrete Mumford?Shah Model", 
+%   Alternating Minimization for a Discrete Mumford-Shah Model", 
 %   submitted to IEEE Transactions on Image Processing, Apr. 2018.
 
 addpath('images');
