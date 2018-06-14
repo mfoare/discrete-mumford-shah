@@ -22,10 +22,13 @@ Yh = [Ih'-1; Ih'; nan(1,length(Ih))]+.5;
 
 plot(Xv(:),Yv(:),sty{1}{:}); hold on
 plot(Xh(:),Yh(:),sty{1}{:}); hold off
+
 grid off
 box on
 axis ij
+axis image
 axis([0, size(edge_vert,2), 0, size(edge_hor,1)]+0.5);
+set(gca,'xtick',[],'ytick',[]);
 
 end
 
