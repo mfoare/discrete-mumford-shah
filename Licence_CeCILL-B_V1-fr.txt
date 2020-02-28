@@ -19,7 +19,7 @@ sa rédaction:
 
 Les auteurs de la licence CeCILL-B (pour Ce[a] C[nrs] I[nria] L[ogiciel]
 L[ibre]) sont:
-
+ 
 Commissariat à l'Energie Atomique - CEA, établissement public de
 recherche à caractère scientifique, technique et industriel, dont le
 siège est situé 25 rue Leblanc, immeuble Le Ponant D, 75015 Paris.

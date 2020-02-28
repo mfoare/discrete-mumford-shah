@@ -406,7 +406,7 @@ the Licensor without any other express or tacit warranty, other than
 that provided for in Article 9.2 and, in particular, without any warranty 
 as to its commercial value, its secured, safe, innovative or relevant 
 nature.
-
+ 
 Specifically, the Licensor does not warrant that the Software is free
 from any error, that it will operate without interruption, that it will
 be compatible with the Licensee's own equipment and software
