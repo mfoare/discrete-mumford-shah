@@ -1,10 +1,18 @@
 function [] = plot_contours(edges, varargin)
 
-if nargin == 2, lw = varargin{1}; 
-else            lw = 1; 
+% if nargin == 2, lw = varargin{1}; 
+% else            lw = 1; 
+% end
+
+if nargin == 2, 
+    contours.style  = 'perso';
+    contours.params = varargin{1}; 
+else
+    contours.style  = 'default';
+    contours.params = {};
 end
 
-sty = contours_style(lw);
+sty = contours_style(contours);
 %c   = size(edges,4);
 
 edge_hor  = edges(:,:,1,:) > 0.5; th = size(edge_hor,2);
@@ -28,20 +36,29 @@ box on
 axis ij
 axis image
 axis([0, size(edge_vert,2), 0, size(edge_hor,1)]+0.5);
+
+% remove white space
 set(gca,'xtick',[],'ytick',[]);
 
 end
 
-function cs = contours_style(lw)
+function cs = contours_style(contours)
 
-col  = colors();
-fcol = fieldnames(col);
-
-cs = cell(1,numel(fcol));
-for i = 1:numel(fcol)
-  cs{i} = {'LineStyle','-','LineWidth',lw,'Color',col.(fcol{i})};
+switch contours.style
+    case 'perso'       
+        cs    = cell(1,1);
+        cs{1} = contours.params;
+        
+    case 'default'
+        col  = colors();
+        fcol = fieldnames(col);
+        
+        cs = cell(1,numel(fcol));
+        for i = 1:numel(fcol)
+            cs{i} = {'LineStyle','-','LineWidth',1,'Color',col.(fcol{i})};
+        end
 end
-
+        
 end
 
 function col = colors()
