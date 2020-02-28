@@ -1,20 +1,26 @@
-% Reproduces last column of Fig. 9 in
-%   M. Foare, N. Pustelnik, L. Condat, "Semi-Linearized Proximal 
-%   Alternating Minimization for a Discrete Mumford-Shah Model", 
-%   submitted to IEEE Transactions on Image Processing, Apr. 2018.
+% See Fig. 8:"china" experiment in
+%    M. Foare, N. Pustelnik, L. Condat, "Semi-Linearized Proximal 
+%       Alternating Minimization for a Discrete Mumford-Shah Model", 
+%       IEEE Transactions on Image Processing, 2019.
 
 addpath('images');
 
-im  = imread('../images/dots-256.png'); 
-bet = 350;              % smoothing
-lam = 4*4.0e-05;        % contour penalization
+im  = imread('BSDS500_china.jpg');
+bet = 6;                % smoothing
+lam = 0.015;             % contour penalization
 
-res = dms(im,bet,lam,'AddNoise',[2 100]);
+res = dms(im,bet,lam,'AddNoise',[1 0.05],'Edges','similar');
 
-figure(4), colormap gray
-subplot(2,2,1); imagesc(res.ground_truth); title('Input image');
-subplot(2,2,2); imagesc(res.data);         title('Degraded image');
-subplot(2,2,3); imagesc(res.u);            title('Restored image');
-subplot(2,2,4); plot_contours(res.e);      title('Contours');
+figure(4)
+subplot(221); imshow(res.ground_truth);    title('Input image');
+subplot(222); imshow(res.data,[]);         title('Degraded image');
+subplot(223); imshow(res.u,[]);            title('Restored image');
+subplot(224); plot_contours(res.e);        title('Contours');
+
+figure(41)
+imshow(res.u); 
+hold on;
+plot_contours(res.e); 
+hold off;
 
 rmpath('images');
