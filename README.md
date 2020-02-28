@@ -3,14 +3,14 @@
 
 
 ***************************************************************************
-* author: Marion Foare                                                    *
-* institution: laboratoire de Physique de l'ENS de Lyon                   *
-* date: February, 28 2020                                                 *
-* License CeCILL-B                                                        *
+* author: Marion Foare                                                    
+* institution: laboratoire de Physique de l'ENS de Lyon                   
+* date: February, 28 2020                                                 
+* License CeCILL-B                                                        
 ***************************************************************************
 ***************************************************************************
-* RECOMMENDATIONS:                                   			  *
-* This toolbox is designed to work with Matlab >2015b 		 	  *
+* RECOMMENDATIONS:                                   			  
+* This toolbox is designed to work with Matlab >2015b 		 	  
 ***************************************************************************
 
 ------------------------------------------------------------------------------------------------------------------------
